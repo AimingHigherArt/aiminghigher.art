@@ -274,9 +274,12 @@ footer{background:var(--navy-dark);padding:2.5rem 4rem;display:flex;align-items:
   <div class="story-form-inner">
     <p class="section-eyebrow" style="text-align:center;margin-bottom:0.5rem">Share Your Moment</p>
     <h2 style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--charcoal);text-align:center;margin-bottom:2rem">Tell us your <em style="font-style:italic">story.</em></h2>
-    <form class="story-form" id="storyForm" name="story-submission" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thanks-story.html">
-      <input type="hidden" name="form-name" value="story-submission">
-      <input name="bot-field" style="display:none">
+    <form class="story-form" id="storyForm" name="story-submission" method="POST" action="https://api.web3forms.com/submit" enctype="multipart/form-data">
+      <input type="hidden" name="access_key" value="b6f1d4cc-16fe-4392-9eb8-abf9ece1735c">
+      <input type="hidden" name="subject" value="New Story Submission — Aiming Higher">
+      <input type="hidden" name="from_name" value="Aiming Higher Website">
+      <input type="hidden" name="redirect" value="https://aiminghigher.art/thanks-story.html">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
 
       <div class="form-row">
         <div class="form-group">

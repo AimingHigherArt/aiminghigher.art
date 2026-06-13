@@ -358,9 +358,12 @@ footer{background:var(--navy-dark);padding:2.5rem 4rem;display:flex;align-items:
       </div>
 
       <!-- NEW REQUEST FORM -->
-      <form class="prayer-form" id="prayerForm" name="prayer-request" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thanks-prayer.html">
-        <input type="hidden" name="form-name" value="prayer-request">
-        <input name="bot-field" style="display:none">
+      <form class="prayer-form" id="prayerForm" name="prayer-request" method="POST" action="https://api.web3forms.com/submit">
+        <input type="hidden" name="access_key" value="b6f1d4cc-16fe-4392-9eb8-abf9ece1735c">
+        <input type="hidden" name="subject" value="New Prayer Request — Aiming Higher">
+        <input type="hidden" name="from_name" value="Aiming Higher Website">
+        <input type="hidden" name="redirect" value="https://aiminghigher.art/thanks-prayer.html">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
         <div class="form-group">
           <label>Your Name</label>
           <input type="text" name="name" placeholder="Leave blank to remain anonymous" id="prayerName">
@@ -374,9 +377,12 @@ footer{background:var(--navy-dark);padding:2.5rem 4rem;display:flex;align-items:
       </form>
 
       <!-- ANSWERED PRAYER FORM -->
-      <form class="prayer-form" id="answeredForm" name="answered-prayer" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thanks-answered.html" style="display:none">
-        <input type="hidden" name="form-name" value="answered-prayer">
-        <input name="bot-field" style="display:none">
+      <form class="prayer-form" id="answeredForm" name="answered-prayer" method="POST" action="https://api.web3forms.com/submit" style="display:none">
+        <input type="hidden" name="access_key" value="b6f1d4cc-16fe-4392-9eb8-abf9ece1735c">
+        <input type="hidden" name="subject" value="Answered Prayer — Aiming Higher">
+        <input type="hidden" name="from_name" value="Aiming Higher Website">
+        <input type="hidden" name="redirect" value="https://aiminghigher.art/thanks-answered.html">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
         <div class="form-group">
           <label>Your Name</label>
           <input type="text" name="name" placeholder="Leave blank to remain anonymous" id="answeredName">
