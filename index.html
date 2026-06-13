@@ -22,13 +22,14 @@ html{scroll-behavior:smooth}
 body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--charcoal);overflow-x:hidden;margin:0;padding:0}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;width:100%;z-index:1000;background:rgba(11,20,37,1);min-height:65px;padding:0.7rem 0}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(11,20,37,1);min-height:65px;padding:0.7rem 36px}
 nav::before{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:rgba(250,247,242,0.2)}
 nav::after{content:'';position:absolute;bottom:-9px;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,transparent 8%,rgba(201,168,76,0.3) 38%,rgba(201,168,76,0.3) 62%,transparent 92%,transparent)}
 .nav-logo{display:none}
 .nav-cta{display:none}
-.nav-links{display:grid;grid-template-columns:repeat(5,1fr);list-style:none;padding:0 36px;box-sizing:border-box;width:100%}
-.nav-links a{display:block;color:rgba(212,197,173,0.62);font-size:14px;line-height:1.4;text-transform:uppercase;text-decoration:none;text-align:center;transition:color 0.3s}
+.nav-links{display:table;table-layout:fixed;width:100%;list-style:none}
+.nav-links li{display:table-cell;text-align:center;vertical-align:middle}
+.nav-links a{display:block;color:rgba(212,197,173,0.62);font-size:14px;line-height:1.4;text-transform:uppercase;text-decoration:none;transition:color 0.3s}
 .nav-links a:hover,.nav-links a.active{color:var(--gold)}
 .nav-links br{display:inline}
 
