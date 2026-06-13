@@ -22,16 +22,16 @@ html{scroll-behavior:smooth}
 body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--charcoal);overflow-x:hidden;margin:0;padding:0}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(11,20,37,1);min-height:65px;padding:0.7rem 36px}
-nav::before{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:rgba(250,247,242,0.2)}
-nav::after{content:'';position:absolute;bottom:-9px;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,transparent 8%,rgba(201,168,76,0.3) 38%,rgba(201,168,76,0.3) 62%,transparent 92%,transparent)}
-.nav-logo{display:none}
-.nav-cta{display:none}
-.nav-links{display:table;table-layout:fixed;width:100%;list-style:none}
-.nav-links li{display:table-cell;text-align:center;vertical-align:middle}
-.nav-links a{display:block;color:rgba(212,197,173,0.62);font-size:14px;line-height:1.4;text-transform:uppercase;text-decoration:none;transition:color 0.3s}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0.9rem 3rem;background:rgba(11,20,37,0.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(201,168,76,0.25);height:72px}
+.nav-logo{display:flex;align-items:center;gap:0.7rem;text-decoration:none}
+.nav-logo img{height:44px;width:auto;filter:brightness(0) invert(1);opacity:0.9}
+.nav-logo span{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--cream);letter-spacing:0.08em;font-weight:300}
+.nav-links{display:flex;gap:0;list-style:none;width:100%;justify-content:space-between;text-align:center}
+.nav-links br{display:none}
+.nav-links a{color:rgba(250,247,242,0.75);font-size:0.76rem;letter-spacing:0.13em;text-transform:uppercase;text-decoration:none;transition:color 0.3s}
 .nav-links a:hover,.nav-links a.active{color:var(--gold)}
-.nav-links br{display:inline}
+.nav-cta{background:var(--gold);color:var(--navy-dark);padding:0.6rem 1.5rem;font-family:'Jost',sans-serif;font-size:0.73rem;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:background 0.3s;font-weight:500}
+.nav-cta:hover{background:var(--gold-light)}
 
 /* HERO - starts right at bottom of nav */
 .hero{
@@ -197,11 +197,15 @@ footer{
 .btn-solid{background:var(--gold)!important;color:var(--navy-dark)!important;border-color:var(--gold)!important}.btn-solid:hover{background:var(--gold-light)!important;color:var(--navy-dark)!important}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:768px){
-  nav{padding:0.7rem 0;position:relative}
+  nav{padding:0.7rem 0;height:auto;min-height:65px;border-bottom:none;position:relative;justify-content:center;background:rgba(11,20,37,1)}
+  nav::before{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:rgba(250,247,242,0.2)}
+  nav::after{content:'';position:absolute;bottom:-9px;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,transparent 8%,rgba(201,168,76,0.3) 38%,rgba(201,168,76,0.3) 62%,transparent 92%,transparent)}
+  .nav-logo{display:none}
   .nav-links{display:flex;flex-wrap:nowrap;justify-content:space-between;gap:0;width:100%;padding:0 36px}
-  .nav-links li{display:block;flex:0 0 auto;text-align:center;padding:0;margin:0}
-  .nav-links a{font-size:14px;letter-spacing:0;line-height:1.4;padding:0;margin:0;display:block;color:rgba(212,197,173,0.62)}
+  .nav-links li{flex:0 0 auto;text-align:center;padding:0;margin:0}
+  .nav-links a{font-size:14px!important;letter-spacing:0!important;line-height:1.4;padding:0;margin:0;display:block;color:rgba(250,247,242,0.75)!important}
   .nav-links br{display:inline}
+  .nav-logo span{display:none}
   .hero{padding-top:64px}
   .story-grid{grid-template-columns:1fr;gap:3rem}
   .story-image::after{display:none}
@@ -241,7 +245,7 @@ footer{
 
 <nav>
   <ul class="nav-links">
-    <li><a href="index.html">Our <br>Aim</a></li>
+    <li><a href="index.html" class="active">Our <br>Aim</a></li>
     <li><a href="shop.html">Our <br>Work</a></li>
     <li><a href="their-stories.html">Their <br>Stories</a></li>
     <li><a href="contact.html">Get <br>Started</a></li>
