@@ -96,10 +96,10 @@ footer{background:var(--navy-dark);padding:2.5rem 4rem;display:flex;align-items:
   nav{padding:0.7rem 0;height:auto;min-height:65px;border-bottom:none;position:relative;justify-content:center;background:rgba(11,20,37,1)}
   nav::before{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:rgba(250,247,242,0.2)}
   nav::after{content:'';position:absolute;bottom:-9px;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,transparent 8%,rgba(201,168,76,0.3) 38%,rgba(201,168,76,0.3) 62%,transparent 92%,transparent)}
-  .nav-links{display:flex;flex-wrap:nowrap;justify-content:space-between;gap:0;width:100%;padding:0 36px}
+  .nav-links{display:flex;flex-wrap:nowrap;justify-content:space-between;gap:0.4rem;width:100%;padding:0 16px}
   .nav-links li{flex:0 0 auto;text-align:center;padding:0;margin:0}
-  .nav-links a{font-size:14px!important;letter-spacing:0!important;line-height:1.4;padding:0;margin:0;display:block;color:rgba(250,247,242,0.75)!important}
-  .nav-links br{display:inline}
+  .nav-links a{font-size:clamp(0.5rem,2.2vw,0.72rem);letter-spacing:0.06em;white-space:nowrap;line-height:1.4;padding:0;margin:0;display:block;color:rgba(250,247,242,0.75)}
+  .nav-links br{display:none}
   .nav-logo{display:none}
   .nav-cta{display:none!important}
   .nav-logo span{display:none}
