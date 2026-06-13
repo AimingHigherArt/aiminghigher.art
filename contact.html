@@ -183,9 +183,12 @@ footer{background:var(--navy-dark);padding:2.5rem 4rem;display:flex;align-items:
 
     <!-- FORM -->
     <div>
-      <form class="contact-form" id="contactForm" name="project-inquiry" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thanks-contact.html">
-        <input type="hidden" name="form-name" value="project-inquiry">
-        <input name="bot-field" style="display:none">
+      <form class="contact-form" id="contactForm" name="project-inquiry" method="POST" action="https://api.web3forms.com/submit">
+        <input type="hidden" name="access_key" value="b6f1d4cc-16fe-4392-9eb8-abf9ece1735c">
+        <input type="hidden" name="subject" value="New Project Inquiry — Aiming Higher">
+        <input type="hidden" name="from_name" value="Aiming Higher Website">
+        <input type="hidden" name="redirect" value="https://aiminghigher.art/thanks-contact.html">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
 
         <div class="form-row">
           <div class="form-group">
